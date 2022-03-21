@@ -1,0 +1,24 @@
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 500px) {
+    @content;
+  }
+}
+
+@mixin flexCenteredRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexCenteredCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
