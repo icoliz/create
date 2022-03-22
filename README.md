@@ -6,6 +6,8 @@ La prueba consisitía en realizar una página web responsive dado el siguiente m
 
 ## Requisitos
 
+Comentarios marcados en **negrita**.
+
 - [x] El layout se compone de logo + menú + cuerpo con un aside a la derecha + footer.
 - [x] La tipografía utilizada es Arial. **Finalmente he mantenido esta tipografía.**
 - [x] El logo está en images/logo.png. **Adicionalmente, he añadido un favicon, se encuentra también en la carpeta img.**

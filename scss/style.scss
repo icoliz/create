@@ -3,6 +3,7 @@
 
 /* Header */
 .header {
+  position: fixed;
   background-color: $pageMain;
   @include flexCenteredCol;
   width: 100%;
@@ -60,25 +61,26 @@
 /* Main */
 .main {
   background-color: $pageBg;
+  display: flex;
+  flex-direction: column;
+  /* viewport height minus header and footer */
+  min-height: calc(100vh - 255px);
+  padding-top: 135px;
   @include tablet {
-    display: flex;
-    padding: 0px;
+    flex-direction: row;
+    padding: 135px 0 0 0;
+    min-height: calc(100vh - 215px);
   }
   @include desktop {
-    padding: 0 60px;
+    padding: 90px 60px 0 60px;
+    min-height: calc(100vh - 170px);
   }
   .content {
     background-color: white;
-    min-height: calc(100vh - 255px);
     padding: 0 20px;
-    /* viewport height minus header and footer */
     @include tablet {
-      min-height: calc(100vh - 215px);
       width: 70%;
       padding: 0 20px;
-    }
-    @include desktop {
-      min-height: calc(100vh - 170px);
     }
     .article {
       padding: 14px 0;
@@ -98,7 +100,7 @@
       }
     }
     .form-article {
-      padding-bottom: 0;
+      padding-bottom: 10px;
       border-bottom: none;
       .form {
         @include flexCenteredCol;
@@ -145,12 +147,11 @@
   }
   .aside {
     background-color: $pageAside;
-    display: none;
+    padding: 24px;
     @include tablet {
       display: block;
       width: 30%;
       min-height: calc(100vh - 215px);
-      padding: 24px;
     }
     @include desktop {
       min-height: calc(100vh - 170px);
