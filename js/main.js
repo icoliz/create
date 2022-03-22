@@ -12,7 +12,9 @@ input.addEventListener('keyup', () => {
 
 btn.addEventListener('click', (ev) => {
   ev.preventDefault();
-  title.innerHTML = userInput;
-  userInput = '';
-  input.value = '';
+  if (userInput !== '') {
+    title.innerHTML = userInput;
+    userInput = '';
+    input.value = '';
+  }
 });
